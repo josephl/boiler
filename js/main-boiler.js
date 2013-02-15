@@ -14,18 +14,19 @@ requirejs.config({
             deps: ['libs/jquery'],
             exports: 'd3'
         },
-        'bootstrap/js/bootstrap.js': {
+        'libs/bootstrap/js/bootstrap': {
             deps: ['libs/jquery']
         },
         'script-boiler': {
-            deps: ['libs/jquery', 'libs/backbone', 'libs/d3', 'bootstrap/js/bootstrap.js']
+            deps: ['libs/jquery', 'libs/backbone', 'libs/d3', 'libs/bootstrap/js/bootstrap']
         }
     }
 });
 
 define(
-    ['libs/underscore', 'libs/backbone', 'libs/d3', 'bootstrap/js/bootstrap.js', 'script-boiler'],
-    function(jQueryLocal, underscoreLocal,
-        backboneLocal, d3Local) {
+    ['libs/underscore', 'libs/backbone', 'libs/d3',
+        'libs/bootstrap/js/bootstrap', 'script-boiler'],
+    function(underscoreLocal, backboneLocal, d3Local,
+        bootstrapLocal, scriptBoilerLocal) {
     }
 );
